@@ -1,0 +1,39 @@
+.navbar .nav-item .nav-link {
+  color: #444;
+  font-size: 0.89rem;
+}
+.navbar .nav-item .nav-link i {
+  font-size: 1.2rem;
+}
+.search-page-header .search-box {
+  position: relative;
+  height: 40px;
+  display: flex;
+  border-radius: 10px;
+  border: 1px solid #999 !important;
+}
+.search-page-header .search-box form {
+  position: relative;
+  width: 85%;
+}
+.search-page-header .search-box form input {
+  width: 100%;
+  height: 30px;
+  border: 0;
+  outline: none;
+  padding: 2px 0;
+}
+.search-page-header .search-box:hover {
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+}
+.search-page-header .search-box .fa {
+  position: relative;
+  margin: 0 1%;
+  font-size: 1.2rem;
+  color: #444;
+  cursor: pointer;
+}
+.search-page-header .search-box .fa.fa-close,
+.search-page-header .search-box .fa.fa-microphone {
+  cursor: pointer;
+}

@@ -1,0 +1,46 @@
+.voice-search {
+  position: fixed !important;
+  width: 100%;
+  height: 100vh !important;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.5);
+}
+.voice-search .microphone {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 3px rgba(190, 11, 11, 0.5);
+  z-index: 5;
+  background: rgb(255, 6, 6);
+}
+.voice-search .microphone::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  animation: pulse 0.5s linear infinite;
+  border-radius: 50%;
+  z-index: -2;
+}
+.voice-search .microphone i {
+  font-size: 2.2rem;
+  color: #fff;
+}
+.voice-search .text {
+  font-size: 2.1rem;
+  font-weight: bold;
+  color: rgb(28, 119, 224);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
