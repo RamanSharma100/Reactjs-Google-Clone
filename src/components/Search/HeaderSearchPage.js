@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import VoiceSearchBox from '../HomeScreen/VoiceSearchBox';
+import { recognition } from '../../api/VoiceSearchAPI';
 
 import './HeaderSearchPage.css';
 
@@ -17,15 +18,25 @@ const HeaderSearchPage = ({ searchTerm, setSearch }) => {
   //set term
   useEffect(() => {
     setTerm(searchTerm);
+    // eslint-disable-next-line
   }, []);
 
   // clear voice search
   const clearVoiceSearch = () => {
     setIsVoiceSearch(false);
+    recognition.stop();
   };
   // open voice search
   const openVoiceSearch = () => {
     setIsVoiceSearch(true);
+    recognition.start();
+    recognition.onresult = (event) => {
+      var current = event.resultIndex;
+      var transcript = event.results[current][0].transcript;
+      setVoiceText(voiceText + transcript);
+      setTerm(voiceText + transcript);
+      setSearch(voiceText + transcript);
+    };
   };
 
   //clear term

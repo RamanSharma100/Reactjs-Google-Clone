@@ -11,7 +11,7 @@ const SearchPageData = ({ data }) => {
             seconds){' '}
           </p>
           {data.items.map((item) => (
-            <>
+            <div key={item.displayLink}>
               <a
                 href={item.displayLink}
                 className="font-weight-normal header-post text-dark text-decoration-none">
@@ -32,7 +32,7 @@ const SearchPageData = ({ data }) => {
                 dangerouslySetInnerHTML={{ __html: item.htmlSnippet }}
                 style={{ color: '#666' }}
               />
-            </>
+            </div>
           ))}
           {/* this is search page data {console.log(data)} */}
         </div>

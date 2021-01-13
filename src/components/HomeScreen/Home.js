@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { recognition } from '../../api/VoiceSearchAPI';
 import Header from './Header';
 
 import './Home.css';
@@ -45,10 +46,19 @@ const Home = ({ setSearch }) => {
   // clear voice search
   const clearVoiceSearch = () => {
     setIsVoiceSearch(false);
+    recognition.stop();
   };
   // open voice search
   const openVoiceSearch = () => {
     setIsVoiceSearch(true);
+    recognition.start();
+    recognition.onresult = (event) => {
+      var current = event.resultIndex;
+      var transcript = event.results[current][0].transcript;
+      setVoiceText(voiceText + transcript);
+      setTerm(voiceText + transcript);
+      setSearch(voiceText + transcript);
+    };
   };
 
   return (
