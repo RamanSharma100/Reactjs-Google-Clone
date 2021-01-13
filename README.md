@@ -1,4 +1,4 @@
-# React Js Google Clone (Voice Search Pending)
+# React Js Google Clone (With Voice Search)
 
 This is the google clone project made with React Js and Google Search API. [Demo Link Coming Soon]
 
