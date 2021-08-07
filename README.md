@@ -1,6 +1,8 @@
 # React Js Google Clone (With Voice Search)
 
-This is the google clone project made with React Js and Google Search API. [Demo Link Coming Soon]
+This is the google clone project made with React Js and Google Search API. 
+
+[Youtube Playlist](https://www.youtube.com/watch?v=9j5WXihnKBc&list=PL_9VQhSm4-mqj5Md60hGwSsbB0wTa07an)
 
 ## How to Run
 
@@ -12,7 +14,7 @@ Then open your directory after extracting it in cmd or terminal and run this com
 
 And also make the .env file and add the data as given in .env_sample file in .env file.
 
-Enter your all google search APi details. [Tutorial will come soom on my youtube channel].
+Enter your all google search APi details. [Tutorial is on my youtube channel].
 
 after doing all this run this command to start your app:-
 
